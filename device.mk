@@ -2,10 +2,8 @@
 $(call inherit-product, device/sony/yoshino/platform.mk)
 ### PROPRIETARY VENDOR FILES
 $(call inherit-product, vendor/sony/lilac/lilac-vendor.mk)
-
-ifeq ($(WITH_FDROID),true)
-$(call inherit-product, vendor/fdroid/fdroid-vendor.mk)
-endif
+### MICROG AND F-DROID
+$(call inherit-product, vendor/microg/microg-vendor.mk)
 
 ### DALVIK/HWUI
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
