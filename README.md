@@ -31,21 +31,23 @@ How to build LineageOS
             <project name="cryptomilk/android_device_sony_lilac" path="device/sony/lilac" remote="github" />
             <!-- MicroG -->
             <project name="cryptomilk/android_vendor_microg" path="vendor/microg" remote="github" revision="master" />
+            <!-- Proprietary blobs -->
+            <project name="Man-with-Arrow/proprietary_vendor_sony_lilac" path="vendor/sony/lilac" remote="github" />
         </manifest>
 
 * Sync the repo:
 
         repo sync
 
+* Extract the MicroG and F-Droid files
+
+        cd vendor/microg
+        ./get_packages.sh
+
 * Setup the environment
 
         source build/envsetup.sh
         lunch lineage_lilac-userdebug
-
-* Extract vendor blobs
-
-        cd device/sony/lilac
-        ./extract-files.sh
 
 * Build LineageOS
 
